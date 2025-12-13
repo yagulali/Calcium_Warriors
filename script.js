@@ -44,11 +44,24 @@ function createCharCard(card) {
     <p><strong>射程:</strong> ${card.range}</p>
     <p><strong>HP:</strong> ${card.hp}</p>
     <p><strong>通常攻撃:</strong> ${card.normalAttack}</p>
-   <p><strong>低コストスキル（CP${card.lowCostSkill.cp}）:</strong> ${card.lowCostSkill.name}</p>
-   <p>${card.lowCostSkill.description}</p>
-   <p><strong>高コストスキル（CP${card.highCostSkill.cp}）:</strong> ${card.highCostSkill.name}</p>
-   <p>${card.highCostSkill.description}</p>
-    <p><strong>パッシブスキル:</strong> ${card.passive}</p>
+    <p><strong>低コストスキル（CP${card.lowCostSkill.cp}）:</strong> ${card.lowCostSkill.name}</p>
+    <p>${card.lowCostSkill.description}</p>
+    <p><strong>高コストスキル（CP${card.highCostSkill.cp}）:</strong> ${card.highCostSkill.name}</p>
+    <p>${card.highCostSkill.description}</p>
+    ${card.passive && card.passive !== 'なし' ? (() => {
+  const match = card.passive.match(/【.*?】/);
+  const name = match ? match[0] : '';
+  const desc = card.passive.replace(/【.*?】/, '').trim();
+
+  return `
+    <p><strong>パッシブスキル:</strong> ${name}</p>
+    <p>${desc}</p>
+  `;
+})() : `
+  <p><strong>パッシブスキル:</strong> なし</p>
+`}
+
+
   `;
   return div;
 }
