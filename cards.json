@@ -148,7 +148,7 @@
     "hp": 120,
     "normalAttack": "【トリガー・アタック】30ダメージ",
     "lowCostSkill": {
-      "name": "【なし】",
+      "name": "なし",
       "cp": 0,
       "description": ""
     },
