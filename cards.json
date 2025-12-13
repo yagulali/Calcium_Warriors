@@ -78,5 +78,345 @@
       "description": "味方のHPを50回復する。"
     },
     "passive": "なし"
+  },
+  {
+    "id": 5,
+    "name": "ジャンクラット大西",
+    "image": "images/junk_onishi.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 70,
+    "normalAttack": "【フラグ・ランチャー】20ダメージ",
+    "lowCostSkill": {
+      "name": "【コンカッション・マイン】",
+      "cp": 5,
+      "description": "50ダメージ、自分を後衛と入れ替える。"
+    },
+    "highCostSkill": {
+      "name": "【RIPタイヤ】",
+      "cp": 8,
+      "description": "コイントスで表なら敵全員に60ダメージ、裏なら一般通過タイヤとなり失敗する。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 6,
+    "name": "異世界ゆーさん",
+    "image": "images/isekai_yuu.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 70,
+    "normalAttack": "【出力70％喝絶】30ダメージ",
+    "lowCostSkill": {
+      "name": "【奥義「融」】",
+      "cp": 2,
+      "description": "次の自ターン、自分の攻撃力＋20。"
+    },
+    "highCostSkill": {
+      "name": "【斬遇須】",
+      "cp": 8,
+      "description": "1 2 3が出るまでサイコロを振り、振った回数×10ダメージを自分以外のモンスター全員に与える。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 7,
+    "name": "てば（極）",
+    "image": "images/teva_kiwami.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 80,
+    "normalAttack": "【ショットガン】20ダメージ",
+    "lowCostSkill": {
+      "name": "【フラッシュ】",
+      "cp": 2,
+      "description": "次の相手のターン、指定した敵1体の通常攻撃を使えなくする。"
+    },
+    "highCostSkill": {
+      "name": "【デッドショット】",
+      "cp": 7,
+      "description": "相手の後衛に100ダメージ"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 8,
+    "name": "茶太郎",
+    "image": "images/chataro.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 120,
+    "normalAttack": "【トリガー・アタック】30ダメージ",
+    "lowCostSkill": {
+      "name": "【なし】",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【僕の得意分野】",
+      "cp": 5,
+      "description": "次の自分の攻撃に＋40ダメージ"
+    },
+    "passive": "【会議離脱】自分が場に出てから次の自ターンの終わりに自分を粉砕する。このパッシブはアイテムの恩恵を得られない。"
+  },
+  {
+    "id": 9,
+    "name": "ヌル",
+    "image": "images/null.png",
+    "tags": ["攻撃型"],
+    "range": "3",
+    "hp": 60,
+    "normalAttack": "【酸を吐く】10ダメージ",
+    "lowCostSkill": {
+      "name": "【睨む】",
+      "cp": 3,
+      "description": "敵に30ダメージ、次の相手のターン攻撃力を－20する。"
+    },
+    "highCostSkill": {
+      "name": "【無】",
+      "cp": 7,
+      "description": "場の敵1体を指定して、ヌルが粉砕されるまでスキルを使えなくする。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 10,
+    "name": "パイラシー・ブートレッグ",
+    "image": "images/Piracy_Bootleg.png",
+    "tags": ["攻撃型"],
+    "range": "3",
+    "hp": 70,
+    "normalAttack": "【パンチ】10ダメージ",
+    "lowCostSkill": {
+      "name": "なし",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【海賊版】",
+      "cp": 7,
+      "description": "味方または敵の高コストスキルをコピーして使用する。射程距離はコピーしたスキルに依存する。"
+    },
+    "passive": "【アイテムコレクター】自分のみにアイテムを使用する時、使用するCP－1"
+  },
+  {
+    "id": 11,
+    "name": "ローグラビティふり原",
+    "image": "images/lowgravity_furi.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 70,
+    "normalAttack": "【SMG】30ダメージ",
+    "lowCostSkill": {
+      "name": "【フェイズシフター】",
+      "cp": 3,
+      "description": "自分の位置を入れ替える。"
+    },
+    "highCostSkill": {
+      "name": "【消えてもらおうかっ！】",
+      "cp": 8,
+      "description": "相手の前衛に初期HPの半分のダメージを与え、後衛にも同じダメージを与える"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 12,
+    "name": "ろり原",
+    "image": "images/lorihara.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 60,
+    "normalAttack": "【ローキック】30ダメージ",
+    "lowCostSkill": {
+      "name": "なし",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【ほら来なよざこ】",
+      "cp": 3,
+      "description": "射程を無視して敵を指定する。敵は1ターンの間自分への通常攻撃以外の行動ができなくなる。ただし敵の射程外でも通常攻撃ができる。"
+    },
+    "passive": "【触ったら逮捕】自分を粉砕したモンスターは次のターン行動できなくなる。"
+  },
+  {
+    "id": 13,
+    "name": "まっさ（ガチャ禁）",
+    "image": "images/massa_gachakin.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 70,
+    "normalAttack": "【石を割る】20ダメージ",
+    "lowCostSkill": {
+      "name": "【2連だけ】",
+      "cp": 4,
+      "description": "20ダメージを2回与える。"
+    },
+    "highCostSkill": {
+      "name": "【全部出すｯ！】",
+      "cp": 8,
+      "description": "サイコロを10回振って5が出た回数×30ダメージ。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 14,
+    "name": "始祖のケツケロ",
+    "image": "images/siso_ketsukero.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 70,
+    "normalAttack": "【薔薇の香り】30ダメージ",
+    "lowCostSkill": {
+      "name": "【Key to world】",
+      "cp": 3,
+      "description": "味方か敵の前後を入れ替える。"
+    },
+    "highCostSkill": {
+      "name": "【ケツアゴビーム】",
+      "cp": 6,
+      "description": "敵全体に30ダメージ。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 15,
+    "name": "きら",
+    "image": "images/kira.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 80,
+    "normalAttack": "【武器創造　ハンドガン】30ダメージ",
+    "lowCostSkill": {
+      "name": "【武器創造　アサルトライフル】",
+      "cp": 2,
+      "description": "射程距離が3になり、20ダメージ。"
+    },
+    "highCostSkill": {
+      "name": "【きらの剣を喰らえ！】",
+      "cp": 8,
+      "description": "110ダメージ。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 16,
+    "name": "きらぬん",
+    "image": "images/kiranun.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 80,
+    "normalAttack": "【メイス】30ダメージ",
+    "lowCostSkill": {
+      "name": "なし",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【瘴気の呪縛】",
+      "cp": 8,
+      "description": "80ダメージ、自分のHPを20回復。自ターンの初めに20回復。（4回）"
+    },
+    "passive": "【お呪い】「きら」が負け犬ゾーンにいる場合、このカードの全てのコマンドに20ダメージ追加(2回)  このパッシブは負け犬ゾーンにいる「きら」1枚につき1回使用できる。重複不可。"
+  },
+  {
+    "id": 17,
+    "name": "虚葉",
+    "image": "images/koba.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 70,
+    "normalAttack": "【ひっかく】10ダメージ",
+    "lowCostSkill": {
+      "name": "【爪を研ぐ】",
+      "cp": 2,
+      "description": "自分の攻撃力を＋10する。永続、重複可能"
+    },
+    "highCostSkill": {
+      "name": "【猫パンチ】",
+      "cp": 6,
+      "description": "60ダメージ。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 18,
+    "name": "リンタ",
+    "image": "images/rinta.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 80,
+    "normalAttack": "【しきんざん】20ダメージ",
+    "lowCostSkill": {
+      "name": "【べきれしいちまん】",
+      "cp": 4,
+      "description": "敵の前衛に30ダメージ。自分が後衛にいるなら前衛に移動してから攻撃する。"
+    },
+    "highCostSkill": {
+      "name": "【リンタブレード(∞)】",
+      "cp": 9,
+      "description": "自分の攻撃力を＋70する。（2回）"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 19,
+    "name": "テリサ・リマー",
+    "image": "images/telisa_limar.png",
+    "tags": ["攻撃型"],
+    "range": "1",
+    "hp": 70,
+    "normalAttack": "【跳び蹴り】20ダメージ",
+    "lowCostSkill": {
+      "name": "なし",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【指揮者のガントレット】",
+      "cp": 6,
+      "description": "敵に低コストスキルを使わせる。相手のCPが足りない場合は失敗。"
+    },
+    "passive": "【遺物耐性】自分のみにアイテムを使用する時、CPを消費しない。"
+  },
+  {
+    "id": 20,
+    "name": "光の戦士 ふりすく",
+    "image": "images/Guardian_furisuku.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 80,
+    "normalAttack": "【ガーディアン・パンチ】20ダメージ",
+    "lowCostSkill": {
+      "name": "なし",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【転変せし物は還元せり】",
+      "cp": 8,
+      "description": "100ダメージを基準に以下の条件。まずコインを2回投げる。このスキルは敵を貫通することができ、初期射程は1で表が出るごとに射程が1伸びる。射程が1離れるごとに20ダメージ軽減される。裏が出た回数ターン、ふりすく キャラクターに10hpを付与する"
+    },
+    "passive": "【ガーディアンダウン】粉砕された後、コインを4回投げ、20x表が出た回数のHPで蘇生される。裏が4枚出ると光が消え、蘇生不可となる。このカード1枚につきに1度のみ使用可能。"
+  },
+  {
+    "id": 21,
+    "name": "アオリ",
+    "image": "images/aori.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 70,
+    "normalAttack": "【グリーンダーティー】20ダメージ",
+    "lowCostSkill": {
+      "name": "【一時戦略的撤退ッ！】",
+      "cp": 4,
+      "description": "自分に10ダメージを与え、無敵を付与する。（1回）"
+    },
+    "highCostSkill": {
+      "name": "【アオリオールスター】",
+      "cp": 7,
+      "description": "60ダメージ、状態異常を付与（ターン終了時に10ダメージ）4ターン"
+    },
+    "passive": "なし"
   }
 ]
