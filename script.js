@@ -1,80 +1,74 @@
 let cards = [];
+let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
 
-// ---------- ブックマーク ----------
-function getBookmarks() {
-  return JSON.parse(localStorage.getItem("bookmarks") || "[]");
-}
-
-function saveBookmarks(bookmarks) {
-  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-}
-
-function isBookmarked(id) {
-  return getBookmarks().includes(id);
-}
-
-function toggleBookmark(id) {
-  let bookmarks = getBookmarks();
-  bookmarks = bookmarks.includes(id)
-    ? bookmarks.filter(b => b !== id)
-    : [...bookmarks, id];
-
-  saveBookmarks(bookmarks);
-  applyFilters();
-}
-
-// ---------- JSON読み込み ----------
+/* =====================
+   JSON 読み込み
+===================== */
 fetch("cards.json")
   .then(res => res.json())
   .then(data => {
     cards = data;
-    displayCards(sortCards(cards));
-  });
+    applyFilters();
+  })
+  .catch(err => console.error("カードデータ読み込み失敗", err));
 
-// ---------- ソート ----------
-function sortCards(arr) {
-  return arr.slice().sort((a, b) => {
-    const aItem = a.tags.includes("アイテム");
-    const bItem = b.tags.includes("アイテム");
+/* =====================
+   ソート（キャラ→アイテム）
+===================== */
+function sortCards(cardList) {
+  const characters = cardList
+    .filter(c => !c.tags.includes("アイテム"))
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-    if (aItem && !bItem) return 1;
-    if (!aItem && bItem) return -1;
+  const items = cardList
+    .filter(c => c.tags.includes("アイテム"))
+    .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
-    return a.name.localeCompare(b.name, "ja");
-  });
+  return [...characters, ...items];
 }
 
-// ---------- 表示 ----------
-function displayCards(list) {
+/* =====================
+   カード表示
+===================== */
+function displayCards(cardList) {
   const container = document.getElementById("cardContainer");
   container.innerHTML = "";
 
-  if (list.length === 0) {
+  if (cardList.length === 0) {
     container.innerHTML = "<p>条件に一致するカードはありません。</p>";
     return;
   }
 
-  list.forEach(card => {
-    const div = document.createElement("div");
+  cardList.forEach(card => {
     const isItem = card.tags.includes("アイテム");
+    const isBookmarked = bookmarks.includes(card.id);
+
+    const tagsHTML = card.tags
+      .map(tag => `<span class="tag ${tag}">${tag}</span>`)
+      .join(" ");
+
     const star = `
-      <span class="bookmark ${isBookmarked(card.id) ? "active" : ""}"
-            onclick="toggleBookmark(${card.id})">★</span>
+      <div class="bookmark ${isBookmarked ? "active" : ""}" data-id="${card.id}">
+        ★
+      </div>
     `;
 
+    const div = document.createElement("div");
+
+    /* ===== アイテム ===== */
     if (isItem) {
       div.className = "card item";
       div.innerHTML = `
         ${star}
         <img src="${card.image}" alt="${card.name}">
         <h3>${card.name}</h3>
+        <div class="tags">${tagsHTML}</div>
+        <p><strong>CP:</strong> ${card.cp}</p>
         <p><strong>効果:</strong> ${card.effect}</p>
       `;
-    } else {
-      const tagsHTML = card.tags
-        .map(t => `<span class="tag ${t}">${t}</span>`)
-        .join(" ");
-
+    }
+    /* ===== キャラ ===== */
+    else {
       div.className = "card";
       div.innerHTML = `
         ${star}
@@ -85,21 +79,47 @@ function displayCards(list) {
         <p><strong>HP:</strong> ${card.hp}</p>
         <p><strong>通常攻撃:</strong> ${card.normalAttack}</p>
         <p><strong>低コストスキル (${card.lowCostSkill.cp}CP):</strong>
-          ${card.lowCostSkill.name} - ${card.lowCostSkill.description}</p>
+          ${card.lowCostSkill.name} - ${card.lowCostSkill.description}
+        </p>
         <p><strong>高コストスキル (${card.highCostSkill.cp}CP):</strong>
-          ${card.highCostSkill.name} - ${card.highCostSkill.description}</p>
+          ${card.highCostSkill.name} - ${card.highCostSkill.description}
+        </p>
         <p><strong>パッシブ:</strong> ${card.passive}</p>
       `;
     }
 
     container.appendChild(div);
   });
+
+  setupBookmarkEvents();
 }
 
-// ---------- フィルタ ----------
+/* =====================
+   ブックマーク処理
+===================== */
+function setupBookmarkEvents() {
+  document.querySelectorAll(".bookmark").forEach(el => {
+    el.addEventListener("click", e => {
+      const id = Number(e.target.dataset.id);
+
+      if (bookmarks.includes(id)) {
+        bookmarks = bookmarks.filter(b => b !== id);
+      } else {
+        bookmarks.push(id);
+      }
+
+      localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+      applyFilters();
+    });
+  });
+}
+
+/* =====================
+   フィルタ処理（OR 条件）
+===================== */
 document.getElementById("searchName").addEventListener("input", applyFilters);
-document.getElementById("showBookmarks").addEventListener("change", applyFilters);
-document.querySelectorAll("#tagFilters input")
+document
+  .querySelectorAll("#tagFilters input[type=checkbox]")
   .forEach(cb => cb.addEventListener("change", applyFilters));
 
 function applyFilters() {
@@ -107,15 +127,17 @@ function applyFilters() {
   const selectedTags = Array.from(
     document.querySelectorAll("#tagFilters input:checked")
   ).map(cb => cb.value);
-  const bookmarksOnly = document.getElementById("showBookmarks").checked;
 
-  let filtered = cards.filter(card => {
-    if (bookmarksOnly && !isBookmarked(card.id)) return false;
-    if (!card.name.includes(nameQuery)) return false;
+  const filtered = cards.filter(card => {
+    const matchName = card.name.includes(nameQuery);
 
-    if (selectedTags.length === 0) return true;
+    if (selectedTags.length === 0) return matchName;
 
-    return selectedTags.some(tag => card.tags.includes(tag));
+    const matchTags = selectedTags.some(tag =>
+      card.tags.includes(tag)
+    );
+
+    return matchName && matchTags;
   });
 
   displayCards(sortCards(filtered));
