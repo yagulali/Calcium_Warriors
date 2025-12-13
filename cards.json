@@ -395,7 +395,7 @@
     "highCostSkill": {
       "name": "【転変せし物は還元せり】",
       "cp": 8,
-      "description": "100ダメージを基準に以下の条件。まずコインを2回投げる。このスキルは敵を貫通することができ、初期射程は1で表が出るごとに射程が1伸びる。射程が1離れるごとに20ダメージ軽減される。裏が出た回数ターン、ふりすく キャラクターに10hpを付与する"
+      "description": "100ダメージを基準に以下の条件。まずコインを2回投げる。このスキルは敵を貫通することができ、初期射程は1で表が出るごとに射程が1伸びる。射程が1離れるごとに20ダメージ軽減される。裏が出た回数ターン、[ふりすく]キャラクターに10hpを付与する"
     },
     "passive": "【ガーディアンダウン】粉砕された後、コインを4回投げ、20x表が出た回数のHPで蘇生される。裏が4枚出ると光が消え、蘇生不可となる。このカード1枚につきに1度のみ使用可能。"
   },
@@ -419,6 +419,287 @@
     },
     "passive": "なし"
   },
+  {
+  "id": 22,
+  "name": "虚葉（冬毛）",
+  "image": "images/koba_huyuge.png",
+  "tags": ["防衛型"],
+  "range": "1",
+  "hp": 100,
+  "normalAttack": "【猫もふパンチ】10ダメージ",
+  "lowCostSkill": {
+    "name": "なし",
+    "cp": 0,
+    "description": ""
+  },
+  "highCostSkill": {
+    "name": "【ひなたぼっこ】",
+    "cp": 6,
+    "description": "自分のHPを50回復する。"
+  },
+  "passive": "【換毛期】手札に[虚葉]があるのなら、自分を負け犬にして置き換える事ができる。置き換えた場合自分の行動値を2増やす。勝利条件には影響しない。"
+  },
+  {
+  "id": 23,
+  "name": "ひつじさん",
+  "image": "images/hitsuzi.png",
+  "tags": ["防衛型"],
+  "range": "1",
+  "hp": 80,
+  "normalAttack": "【頭突き】20ダメージ",
+  "lowCostSkill": {
+    "name": "【羊の防衛本能】",
+    "cp": 3,
+    "description": "このカードを負け犬にする。勝利条件には影響しない。"
+  },
+  "highCostSkill": {
+    "name": "【ひつじが1匹...】",
+    "cp": 6,
+    "description": "自分のターンの初めにのみ発動可能。場の全てのモンスターを1ターン行動不能にする。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 24,
+  "name": "ゆーさん（戦!ゆー）",
+  "image": "images/butler_yuu.png",
+  "tags": ["防衛型"],
+  "range": "1",
+  "hp": 120,
+  "normalAttack": "【殴り】20ダメージ",
+  "lowCostSkill": {
+    "name": "【1000kgフィスト】",
+    "cp": 4,
+    "description": "サイコロを振って、1～4なら失敗。5～6なら70ダメージを与える。"
+  },
+  "highCostSkill": {
+    "name": "【1Tストンプ】",
+    "cp": 7,
+    "description": "サイコロを振って、1～2なら敵全員に100ダメージ。3～6なら捻挫して自分に100ダメージ。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 25,
+  "name": "アオリーバ",
+  "image": "images/aoriba.png",
+  "tags": ["防衛型"],
+  "range": "1",
+  "hp": 90,
+  "normalAttack": "【唾ぺッ】20ダメージ",
+  "lowCostSkill": {
+    "name": "なし",
+    "cp": 0,
+    "description": ""
+  },
+  "highCostSkill": {
+    "name": "【俺のちんこもでかくなってねぇかぇお？】",
+    "cp": 8,
+    "description": "70ダメージ。自分が次に受けるダメージを40軽減する。味方に[アオリ]がいる場合、次のアオリの攻撃力＋30。"
+  },
+  "passive": "【デカチン】あらゆるダメージを10軽減する。"
+  },
+  {
+  "id": 26,
+  "name": "小僧さん",
+  "image": "images/kozou.png",
+  "tags": ["防衛型"],
+  "range": "1",
+  "hp": 120,
+  "normalAttack": "【カスパンチ】10ダメージ",
+  "lowCostSkill": {
+    "name": "【黒いフラッシュ】",
+    "cp": 2,
+    "description": "70ダメージ。サイコロを振り、1が出なければ失敗。"
+  },
+  "highCostSkill": {
+    "name": "【穿つ拳】",
+    "cp": 5,
+    "description": "30ダメージ。次の相手のターン、敵から自分以外の味方のみが対象にされれば、代わりに自分が効果を受ける。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 27,
+  "name": "てば（EVIL）",
+  "image": "images/teva_evil.png",
+  "tags": ["防衛型"],
+  "range": "1",
+  "hp": 100,
+  "normalAttack": "【殺意】20ダメージ",
+  "lowCostSkill": {
+    "name": "【脳震盪】",
+    "cp": 5,
+    "description": "30ダメージ。2ターンの間、この技で受けたダメージは回復できない。"
+  },
+  "highCostSkill": {
+    "name": "【嚙み砕く】",
+    "cp": 10,
+    "description": "射程距離に関係なく、指定したカード1枚を粉砕する。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 28,
+  "name": "うるぽちゃ",
+  "image": "images/ulupocha.png",
+  "tags": ["支援型"],
+  "range": "2",
+  "hp": 40,
+  "normalAttack": "【小さいお手々】10ダメージ",
+  "lowCostSkill": {
+    "name": "【骨の供給】",
+    "cp": 1,
+    "description": "CPを3回復する。"
+  },
+  "highCostSkill": {
+    "name": "【至極の可愛さ】",
+    "cp": 6,
+    "description": "自ターンの初めにのみ使用可能。次の自ターンまで自分が粉砕されていなければCPを10回復する。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 29,
+  "name": "👵",
+  "image": "images/bba.png",
+  "tags": ["支援型"],
+  "range": "2",
+  "hp": 40,
+  "normalAttack": "【松葉杖】10ダメージ",
+  "lowCostSkill": {
+    "name": "なし",
+    "cp": 0,
+    "description": ""
+  },
+  "highCostSkill": {
+    "name": "【飴ちゃんいるかい？】",
+    "cp": 3,
+    "description": "1ターンの間、味方の受けるダメージを20軽減し、HPを20回復する。自分には使用不可。"
+  },
+  "passive": "【道徳心】自分を攻撃したモンスターに20ダメージ。"
+  },
+  {
+  "id": 30,
+  "name": "やぐらり",
+  "image": "images/yagulali.png",
+  "tags": ["支援型"],
+  "range": "3",
+  "hp": 50,
+  "normalAttack": "【ペンを投げる】10ダメージ",
+  "lowCostSkill": {
+    "name": "【滅浄三業】",
+    "cp": 2,
+    "description": "ターン終了時まで、敵にダメージを与えるたびに、追加で敵全体に10ダメージを与える。"
+  },
+  "highCostSkill": {
+    "name": "【月に代わってお仕置きよ】",
+    "cp": 7,
+    "description": "このターンの味方全体の行動値を1増やす。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 31,
+  "name": "ロリコンのふり原",
+  "image": "images/loricon_furi.png",
+  "tags": ["支援型"],
+  "range": "3",
+  "hp": 50,
+  "normalAttack": "【視線】10ダメージ",
+  "lowCostSkill": {
+    "name": "【手を差し伸べる】",
+    "cp": 4,
+    "description": "30ダメージ。"
+  },
+  "highCostSkill": {
+    "name": "【😭😭😭】",
+    "cp": 5,
+    "description": "聖なる涙で味方の状態異常を全て洗い流す。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 33,
+  "name": "イコラ・レイ",
+  "image": "images/ikora_rei.png",
+  "tags": ["支援型"],
+  "range": "3",
+  "hp": 60,
+  "normalAttack": "【音楽】10ダメージ",
+  "lowCostSkill": {
+    "name": "【m!p】",
+    "cp": 3,
+    "description": "味方の攻撃力を＋10する。（1回）さらにYoutubeなどで音楽を流すことができる。"
+  },
+  "highCostSkill": {
+    "name": "【m!s】",
+    "cp": 6,
+    "description": "場の指定されたモンスターは、コイントスで表を出さないと失敗になる。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 34,
+  "name": "はんぺん",
+  "image": "images/hanpen.png",
+  "tags": ["支援型"],
+  "range": "2",
+  "hp": 70,
+  "normalAttack": "【ライト・ハンドピーク】20ダメージ",
+  "lowCostSkill": {
+    "name": "【射程管理】",
+    "cp": 4,
+    "description": "相手の前衛に20ダメージ。"
+  },
+  "highCostSkill": {
+    "name": "【え？ヒールしろ？】",
+    "cp": 6,
+    "description": "味方全員のHPを20回復する。"
+  },
+  "passive": "なし"
+  },
+  {
+  "id": 35,
+  "name": "まるすけ",
+  "image": "images/marusuke.png",
+  "tags": ["支援型"],
+  "range": "1",
+  "hp": 70,
+  "normalAttack": "【マフラーソード】20ダメージ",
+  "lowCostSkill": {
+    "name": "なし",
+    "cp": 0,
+    "description": ""
+  },
+  "highCostSkill": {
+    "name": "【マフラーアーマー】",
+    "cp": 5,
+    "description": "自分のHPを30回復する。次の自ターンになるまで無敵になる。"
+  },
+  "passive": "【キュートアグレッション】自分がダメージを受けるとCPを1回復する。"
+  },
+  {
+  "id": 36,
+  "name": "てば（戦！ゆー）",
+  "image": "images/butler_teva.png",
+  "tags": ["支援型"],
+  "range": "1",
+  "hp": 60,
+  "normalAttack": "【BB弾】10ダメージ",
+  "lowCostSkill": {
+    "name": "【治療弾】",
+    "cp": 3,
+    "description": "味方か自分のHPを30回復する。"
+  },
+  "highCostSkill": {
+    "name": "【アドレナリン弾】",
+    "cp": 8,
+    "description": "味方の攻撃力を1ターンの間2倍にする。"
+  },
+  "passive": "なし"
+  },
+
   {
     "id": 1001,
     "name": "携帯型カルシウム",
