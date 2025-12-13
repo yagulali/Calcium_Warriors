@@ -382,7 +382,7 @@
   {
     "id": 20,
     "name": "光の戦士 ふりすく",
-    "image": "images/Guardian_furisuku.png",
+    "image": "images/Guardian_furisku.png",
     "tags": ["攻撃型"],
     "range": "2",
     "hp": 80,
