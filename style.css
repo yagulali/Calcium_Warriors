@@ -73,7 +73,7 @@ h1, h2 {
 .tag.攻撃型 { background: #e74c3c; }
 .tag.防衛型 { background: #3498db; }
 .tag.支援型 { background: #2ecc71; }
-.tag.アイテム { background: #7f8c8d; }
+.tag.アイテム { background: #f4fc00; }
 
 .bookmark {
   position: absolute;
