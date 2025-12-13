@@ -7,20 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>カード一覧</h1>
 
-  <!-- 検索 -->
-  <input type="text" id="searchName" placeholder="名前で検索">
-  
-  <!-- タグ絞り込み -->
-  <div id="tagFilters">
-    <label><input type="checkbox" value="攻撃型">攻撃型</label>
-    <label><input type="checkbox" value="支援型">支援型</label>
-    <label><input type="checkbox" value="防衛型">防衛型</label>
-  </div>
+<h1>カード一覧</h1>
 
-  <div id="cardContainer"></div>
+<input type="text" id="searchName" placeholder="名前で検索">
 
-  <script src="script.js"></script>
+<div id="bookmarkFilter">
+  <label>
+    <input type="checkbox" id="showBookmarks">
+    ブックマークのみ表示
+  </label>
+</div>
+
+<div id="tagFilters">
+  <label><input type="checkbox" value="攻撃型">攻撃型</label>
+  <label><input type="checkbox" value="支援型">支援型</label>
+  <label><input type="checkbox" value="防衛型">防衛型</label>
+  <label><input type="checkbox" value="アイテム">アイテム</label>
+</div>
+
+<div id="cardContainer"></div>
+
+<script src="script.js"></script>
 </body>
 </html>

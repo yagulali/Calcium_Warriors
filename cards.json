@@ -418,5 +418,19 @@
       "description": "60ダメージ、状態異常を付与（ターン終了時に10ダメージ）4ターン"
     },
     "passive": "なし"
+  },
+  {
+    "id": 101,
+    "name": "回復ポーション",
+    "image": "images/heal_potion.png",
+    "tags": ["アイテム"],
+    "effect": "味方1体のHPを30回復する。"
+  },
+  {
+    "id": 102,
+    "name": "攻撃の書",
+    "image": "images/atk_book.png",
+    "tags": ["アイテム"],
+    "effect": "次の自分の攻撃に＋20ダメージを付与する。"
   }
 ]
