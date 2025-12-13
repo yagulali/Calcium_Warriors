@@ -703,7 +703,7 @@
   {
     "id": 1001,
     "name": "携帯型カルシウム",
-    "image": "",
+    "image": "images/keitai_calcium.png",
     "tags": ["アイテム"],
     "cp": 0,
     "effect": "CPを1回復する"
