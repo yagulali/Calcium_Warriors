@@ -44,10 +44,10 @@ function createCharCard(card) {
     <p><strong>射程:</strong> ${card.range}</p>
     <p><strong>HP:</strong> ${card.hp}</p>
     <p><strong>通常攻撃:</strong> ${card.normalAttack}</p>
-    <p><strong>低コストスキル (${card.lowCostSkill.cp}):</strong> ${card.lowCostSkill.name}</p>
-    <p>${card.lowCostSkill.description}</p>
-    <p><strong>高コストスキル (${card.highCostSkill.cp}):</strong> ${card.highCostSkill.name}</p>
-    <p>${card.highCostSkill.description}</p>
+   <p><strong>低コストスキル（CP${card.lowCostSkill.cp}）:</strong> ${card.lowCostSkill.name}</p>
+   <p>${card.lowCostSkill.description}</p>
+   <p><strong>高コストスキル（CP${card.highCostSkill.cp}）:</strong> ${card.highCostSkill.name}</p>
+   <p>${card.highCostSkill.description}</p>
     <p><strong>パッシブスキル:</strong> ${card.passive}</p>
   `;
   return div;
