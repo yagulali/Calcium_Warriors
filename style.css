@@ -1,0 +1,110 @@
+/* 全体スタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* 名前検索バー */
+#searchName {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px auto;
+  padding: 8px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* タグフィルター */
+#tagFilters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#tagFilters label {
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+/* カードコンテナ（1行3列固定） */
+#cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* カード本体 */
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 0.95em;
+}
+
+/* タグ表示 */
+.card .tags {
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* 個別タグスタイル */
+.tag {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 2px 2px 0 0;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+}
+
+/* タグ別カラー */
+.tag.攻撃型 { background-color: #eb2b16; }
+.tag.支援型 { background-color: #6de622; }
+.tag.防衛型 { background-color: #1371b0; }
+
+
+/* レスポンシブ */
+@media (max-width: 1024px) {
+  #cardContainer { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  #cardContainer { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  #cardContainer { grid-template-columns: repeat(1, 1fr); }
+}

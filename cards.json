@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "穴亜 五右衛門",
+    "image": "images/ketsua_goemon.png",
+    "tags": ["攻撃型"],
+    "range": "2",
+    "hp": 80,
+    "normalAttack": "【斬る】20ダメージ",
+    "lowCostSkill": {
+      "name": "【納刀】",
+      "cp": 4,
+      "description": "次の自ターン、自分の攻撃力＋30。"
+    },
+    "highCostSkill": {
+      "name": "【穴破六面斬】",
+      "cp": 7,
+      "description": "サイコロを振って、サイコロの目×20ダメージ"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 2,
+    "name": "ドロス",
+    "image": "images/dorosu.png",
+    "tags": ["防衛型"],
+    "range": "2",
+    "hp": 110,
+    "normalAttack": "【ドロスパンチ】10ダメージ",
+    "lowCostSkill": {
+      "name": "なし",
+      "cp": 0,
+      "description": ""
+    },
+    "highCostSkill": {
+      "name": "【巨大化】",
+      "cp": 6,
+      "description": "1ターンの間受けるダメージを60軽減する。"
+    },
+    "passive": "【死に戻り】20ダメージ以下の攻撃で粉砕されてもHP30で復活する。"
+  },
+  {
+    "id": 3,
+    "name": "ニガーアーム茶太郎",
+    "image": "images/ng_arm_chataro.png",
+    "tags": ["防衛型"],
+    "range": "1",
+    "hp": 120,
+    "normalAttack": "【殴打】20ダメージ",
+    "lowCostSkill": {
+      "name": "【黒色武装】",
+      "cp": 4,
+      "description": "次の相手のターンに受けるダメージを20軽減。"
+    },
+    "highCostSkill": {
+      "name": "【アルティメット茶太郎インパクト】",
+      "cp": 10,
+      "description": "射程内の敵全員に150ダメージ。"
+    },
+    "passive": "なし"
+  },
+  {
+    "id": 4,
+    "name": "giornoジョヴァgiogioペン",
+    "image": "images/ng_arm_chataro.png",
+    "tags": ["支援型"],
+    "range": "2",
+    "hp": 60,
+    "normalAttack": "【/start】10ダメージ",
+    "lowCostSkill": {
+      "name": "【/dict-add】",
+      "cp": 3,
+      "description": "味方の受けるダメージを20軽減する。"
+    },
+    "highCostSkill": {
+      "name": "【/help】",
+      "cp": 6,
+      "description": "味方のHPを50回復する。"
+    },
+    "passive": "なし"
+  }
+]

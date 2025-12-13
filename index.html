@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カード一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>カード一覧</h1>
+
+  <!-- 検索 -->
+  <input type="text" id="searchName" placeholder="名前で検索">
+  
+  <!-- タグ絞り込み -->
+  <div id="tagFilters">
+    <label><input type="checkbox" value="攻撃型">攻撃型</label>
+    <label><input type="checkbox" value="支援型">支援型</label>
+    <label><input type="checkbox" value="防衛型">防衛型</label>
+  </div>
+
+  <div id="cardContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
