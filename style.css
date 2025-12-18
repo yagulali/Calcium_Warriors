@@ -1,11 +1,27 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-  margin: 20px;
+/* =======================
+   フォント読み込み
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+/* 数字フォントは自分のファイルを使用 */
+@font-face {
+  font-family: "SoloistExpand";
+  src: url("font/soloistexpand.ttf") format("truetype");
 }
 
-h1, h2 {
+/* =======================
+   全体
+======================= */
+body {
+  font-family: "Dela Gothic One", sans-serif;
+  background: #f9f9f9;
+  margin: 20px;
+  font-weight: normal;
+}
+
+h1, h2, h3 {
   text-align: center;
+  font-weight: normal;
 }
 
 #searchName {
@@ -25,6 +41,9 @@ h1, h2 {
   margin-right: 10px;
 }
 
+/* =======================
+   カードレイアウト
+======================= */
 #characterContainer,
 #itemContainer {
   display: grid;
@@ -39,6 +58,7 @@ h1, h2 {
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: relative;
+  text-align: left; /* 能力表記左寄せ */
 }
 
 .card.item {
@@ -51,11 +71,9 @@ h1, h2 {
   margin: 0 auto 10px;
 }
 
-.card h3 {
-  text-align: center;
-  margin: 5px 0;
-}
-
+/* =======================
+   タグ
+======================= */
 .tags {
   text-align: center;
   margin-bottom: 5px;
@@ -73,8 +91,35 @@ h1, h2 {
 .tag.攻撃型 { background: #e74c3c; }
 .tag.防衛型 { background: #3498db; }
 .tag.支援型 { background: #2ecc71; }
-.tag.アイテム { background: #f4fc00; }
+.tag.アイテム { background: #f4fc00; color:#000; }
 
+/* =======================
+   フォント例外
+======================= */
+
+/* スキル・パッシブ説明 */
+.skill-description,
+.passive-description {
+  font-family:
+    "ヒラギノ角ゴシックサンセリフ W8",
+    "Hiragino Kaku Gothic ProN",
+    sans-serif;
+}
+
+/* DMG / CP 数字 */
+.dmg-number,
+.cp-number {
+  font-family: "SoloistExpand", sans-serif;
+}
+
+/* DMG ラベル */
+.dmg-label {
+  font-size: 0.8em;
+}
+
+/* =======================
+   ブックマーク
+======================= */
 .bookmark {
   position: absolute;
   top: 8px;
@@ -88,6 +133,9 @@ h1, h2 {
   color: gold;
 }
 
+/* =======================
+   レスポンシブ
+======================= */
 @media (max-width: 768px) {
   #characterContainer,
   #itemContainer {
