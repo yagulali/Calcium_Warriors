@@ -9,7 +9,7 @@
     "attacks": { "normal": { "name": "斬る", "damage": 20 } },
     "skills": [
       { "tier": "low", "name": "納刀", "cp": 4, "description": "次の自ターン、自分の攻撃力＋30。" },
-      { "tier": "high", "name": "穴破六面斬", "cp": 7, "description": "サイコロを振って、出目×20ダメージ。" }
+      { "tier": "high", "name": "穴破六面斬", "cp": 7, "description": "サイコロを振って、サイコロの目×20ダメージ" }
     ],
     "passive": null
   },
@@ -22,7 +22,7 @@
     "stats": { "range": 2, "hp": 110 },
     "attacks": { "normal": { "name": "ドロスパンチ", "damage": 10 } },
     "skills": [
-      { "tier": "high", "name": "巨大化", "cp": 6, "description": "1ターンの間、受けるダメージを60軽減する。" }
+      { "tier": "high", "name": "巨大化", "cp": 6, "description": "1ターンの間受けるダメージを60軽減する。" }
     ],
     "passive": {
       "name": "死に戻り",
@@ -38,7 +38,7 @@
     "stats": { "range": 1, "hp": 120 },
     "attacks": { "normal": { "name": "殴打", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "黒色武装", "cp": 4, "description": "次の相手ターンに受けるダメージを20軽減。" },
+      { "tier": "low", "name": "黒色武装", "cp": 4, "description": "次の相手のターンに受けるダメージを毎回20軽減。" },
       { "tier": "high", "name": "アルティメット茶太郎インパクト", "cp": 10, "description": "射程内の敵全員に150ダメージ。" }
     ],
     "passive": null
@@ -67,7 +67,7 @@
     "attacks": { "normal": { "name": "フラグ・ランチャー", "damage": 20 } },
     "skills": [
       { "tier": "low", "name": "コンカッション・マイン", "cp": 5, "description": "50ダメージ。自分を後衛と入れ替える。" },
-      { "tier": "high", "name": "RIPタイヤ", "cp": 8, "description": "コイントスで表なら敵全員に60ダメージ。裏なら失敗。" }
+      { "tier": "high", "name": "RIPタイヤ", "cp": 8, "description": "コイントスで表なら敵全員に60ダメージ、裏なら一般通過タイヤとなり失敗する。" }
     ],
     "passive": null
   },
@@ -81,7 +81,7 @@
     "attacks": { "normal": { "name": "出力70％喝絶", "damage": 30 } },
     "skills": [
       { "tier": "low", "name": "奥義「融」", "cp": 2, "description": "次の自ターン、自分の攻撃力＋20。" },
-      { "tier": "high", "name": "斬遇須", "cp": 8, "description": "1〜3が出るまでサイコロを振り、振った回数×10ダメージを自分以外の全員に与える。" }
+      { "tier": "high", "name": "斬遇須", "cp": 8, "description": "1 2 3が出るまでサイコロを振り、振った回数×10ダメージを自分以外のモンスター全員に与える。" }
     ],
     "passive": null
   },
@@ -94,7 +94,7 @@
     "stats": { "range": 2, "hp": 80 },
     "attacks": { "normal": { "name": "ショットガン", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "フラッシュ", "cp": 2, "description": "次の相手ターン、指定した敵1体の通常攻撃を使用不可にする。" },
+      { "tier": "low", "name": "フラッシュ", "cp": 2, "description": "次の相手のターン、指定した敵1体の通常攻撃を使えなくする。" },
       { "tier": "high", "name": "デッドショット", "cp": 7, "description": "相手の後衛に100ダメージ。" }
     ],
     "passive": null
@@ -112,7 +112,7 @@
     ],
     "passive": {
       "name": "会議離脱",
-      "description": "場に出てから次の自ターン終了時に自分を粉砕する。アイテム効果を受けない。"
+      "description": "自分が場に出てから次の自ターンの終わりに自分を粉砕する。このパッシブはアイテムの恩恵を得られない。"
     }
   },
   {
@@ -124,8 +124,8 @@
     "stats": { "range": 3, "hp": 60 },
     "attacks": { "normal": { "name": "酸を吐く", "damage": 10 } },
     "skills": [
-      { "tier": "low", "name": "睨む", "cp": 3, "description": "30ダメージ。次の相手ターン攻撃力−20。" },
-      { "tier": "high", "name": "無", "cp": 7, "description": "指定した敵1体を、ヌルが粉砕されるまでスキル使用不可にする。" }
+      { "tier": "low", "name": "睨む", "cp": 3, "description": "敵に30ダメージ、次の相手のターン攻撃力を－20する。" },
+      { "tier": "high", "name": "無", "cp": 7, "description": "場の敵1体を指定して、ヌルが粉砕されるまでスキルを使えなくする。" }
     ],
     "passive": null
   },
@@ -138,11 +138,11 @@
     "stats": { "range": 3, "hp": 70 },
     "attacks": { "normal": { "name": "パンチ", "damage": 10 } },
     "skills": [
-      { "tier": "high", "name": "海賊版", "cp": 7, "description": "味方または敵の高コストスキルをコピーして使用する。" }
+      { "tier": "high", "name": "海賊版", "cp": 7, "description": "味方または敵の高コストスキルをコピーして使用する。射程距離はコピーしたスキルに依存する。" }
     ],
     "passive": {
       "name": "アイテムコレクター",
-      "description": "自分のみにアイテムを使用する時、消費CP−1。"
+      "description": "自分のみにアイテムを使用する時、使用するCP－1"
     }
   },
   {
@@ -155,7 +155,7 @@
     "attacks": { "normal": { "name": "SMG", "damage": 30 } },
     "skills": [
       { "tier": "low", "name": "フェイズシフター", "cp": 3, "description": "自分の位置を入れ替える。" },
-      { "tier": "high", "name": "消えてもらおうかっ！", "cp": 8, "description": "相手前衛に初期HPの半分、後衛にも同量のダメージ。" }
+      { "tier": "high", "name": "消えてもらおうかっ！", "cp": 8, "description": "相手の前衛に初期HPの半分のダメージを与え、後衛にも同じダメージを与える。" }
     ],
     "passive": null
   },
@@ -168,11 +168,11 @@
     "stats": { "range": 1, "hp": 60 },
     "attacks": { "normal": { "name": "ローキック", "damage": 30 } },
     "skills": [
-      { "tier": "high", "name": "ほら来なよざこ", "cp": 3, "description": "射程無視で指定。1ターン通常攻撃以外不可。" }
+      { "tier": "high", "name": "ほら来なよざこ", "cp": 3, "description": "射程を無視して敵を指定する。敵は1ターンの間自分への通常攻撃以外の行動ができなくなる。ただし敵の射程外でも通常攻撃ができる。" }
     ],
     "passive": {
       "name": "触ったら逮捕",
-      "description": "自分を粉砕した敵は次のターン行動不能。"
+      "description": "自分を粉砕したモンスターは次のターン行動できなくなる。"
     }
   },
   {
@@ -185,7 +185,7 @@
     "attacks": { "normal": { "name": "石を割る", "damage": 20 } },
     "skills": [
       { "tier": "low", "name": "2連だけ", "cp": 4, "description": "20ダメージを2回与える。" },
-      { "tier": "high", "name": "全部出すｯ！", "cp": 8, "description": "サイコロ10回、5の回数×30ダメージ。" }
+      { "tier": "high", "name": "全部出すｯ！", "cp": 8, "description": "サイコロを10回振って5が出た回数×30ダメージ。" }
     ],
     "passive": null
   },
@@ -212,7 +212,7 @@
     "stats": { "range": 1, "hp": 80 },
     "attacks": { "normal": { "name": "武器創造 ハンドガン", "damage": 30 } },
     "skills": [
-      { "tier": "low", "name": "武器創造 アサルトライフル", "cp": 2, "description": "射程3、20ダメージ。" },
+      { "tier": "low", "name": "武器創造 アサルトライフル", "cp": 2, "description": "射程距離が3になり、20ダメージ。" },
       { "tier": "high", "name": "きらの剣を喰らえ！", "cp": 8, "description": "110ダメージ。" }
     ],
     "passive": null
@@ -226,11 +226,11 @@
     "stats": { "range": 1, "hp": 80 },
     "attacks": { "normal": { "name": "メイス", "damage": 30 } },
     "skills": [
-      { "tier": "high", "name": "瘴気の呪縛", "cp": 8, "description": "80ダメージ。HP20回復＋自ターン開始時20回復（4回）。" }
+      { "tier": "high", "name": "瘴気の呪縛", "cp": 8, "description": "80ダメージ、自分のHPを20回復。自ターンの初めに20回復。（4回）" }
     ],
     "passive": {
       "name": "お呪い",
-      "description": "負け犬ゾーンの「きら」1枚につき全コマンドに20ダメージ追加（重複不可）。"
+      "description": "「きら」が負け犬ゾーンにいる場合、このカードの全てのコマンドに20ダメージ追加(2回) このパッシブは負け犬ゾーンにいる「きら」1枚につき1回使用できる。重複不可。"
     }
   },
   {
@@ -242,7 +242,7 @@
     "stats": { "range": 1, "hp": 70 },
     "attacks": { "normal": { "name": "ひっかく", "damage": 10 } },
     "skills": [
-      { "tier": "low", "name": "爪を研ぐ", "cp": 2, "description": "攻撃力＋10。永続・重複可。" },
+      { "tier": "low", "name": "爪を研ぐ", "cp": 2, "description": "自分の攻撃力を＋10する。永続、重複可能" },
       { "tier": "high", "name": "猫パンチ", "cp": 6, "description": "60ダメージ。" }
     ],
     "passive": null
@@ -256,8 +256,8 @@
     "stats": { "range": 2, "hp": 80 },
     "attacks": { "normal": { "name": "しきんざん", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "べきれしいちまん", "cp": 4, "description": "敵前衛に30ダメージ。後衛なら前に出て攻撃。" },
-      { "tier": "high", "name": "リンタブレード(∞)", "cp": 9, "description": "攻撃力＋70（2回）。" }
+      { "tier": "low", "name": "べきれしいちまん", "cp": 4, "description": "敵の前衛に30ダメージ。自分が後衛にいるなら前衛に移動してから攻撃する。" },
+      { "tier": "high", "name": "リンタブレード(∞)", "cp": 9, "description": "自分の攻撃力を＋70する。（2回）" }
     ],
     "passive": null
   },
@@ -270,11 +270,11 @@
     "stats": { "range": 1, "hp": 70 },
     "attacks": { "normal": { "name": "跳び蹴り", "damage": 20 } },
     "skills": [
-      { "tier": "high", "name": "指揮者のガントレット", "cp": 6, "description": "敵に低コストスキルを使わせる。CP不足なら失敗。" }
+      { "tier": "high", "name": "指揮者のガントレット", "cp": 6, "description": "敵に低コストスキルを使わせる。相手のCPが足りない場合は失敗。" }
     ],
     "passive": {
       "name": "遺物耐性",
-      "description": "自分のみにアイテムを使う時、CPを消費しない。"
+      "description": "自分のみにアイテムを使用する時、CPを消費しない。"
     }
   },
   {
@@ -286,11 +286,11 @@
     "stats": { "range": 2, "hp": 80 },
     "attacks": { "normal": { "name": "ガーディアン・パンチ", "damage": 20 } },
     "skills": [
-      { "tier": "high", "name": "転変せし物は還元せり", "cp": 8, "description": "コイントス2回。表ごとに射程＋1、距離1ごとに−20ダメージ。裏の回数ターンHP＋10。" }
+      { "tier": "high", "name": "転変せし物は還元せり", "cp": 8, "description": "100ダメージを基準に以下の条件。まずコインを2回投げる。このスキルは敵を貫通することができ、初期射程は1で表が出るごとに射程が1伸びる。射程が1離れるごとに20ダメージ軽減される。裏が出た回数ターン、[ふりすく]キャラクターに10hpを付与する" }
     ],
     "passive": {
       "name": "ガーディアンダウン",
-      "description": "粉砕後コイントス4回。表×20HPで蘇生。裏4で蘇生不可（1回限り）。"
+      "description": "粉砕された後、コインを4回投げ、20x表が出た回数のHPで蘇生される。裏が4枚出ると光が消え、蘇生不可となる。このカード1枚につきに1度のみ使用可能。"
     }
   },
   {
@@ -302,8 +302,8 @@
     "stats": { "range": 2, "hp": 70 },
     "attacks": { "normal": { "name": "グリーンダーティー", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "一時戦略的撤退ッ！", "cp": 4, "description": "自分に10ダメージを与え、無敵を付与（1回）。" },
-      { "tier": "high", "name": "アオリオールスター", "cp": 7, "description": "60ダメージ＋状態異常（ターン終了時10ダメージ×4ターン）。" }
+      { "tier": "low", "name": "一時戦略的撤退ッ！", "cp": 4, "description": "自分に10ダメージを与え、無敵を付与する。（1回）" },
+      { "tier": "high", "name": "アオリオールスター", "cp": 7, "description": "60ダメージ、状態異常を付与（ターン終了時に10ダメージ）4ターン" }
     ],
     "passive": null
   },
@@ -320,7 +320,7 @@
     ],
     "passive": {
       "name": "換毛期",
-      "description": "手札に[虚葉]があるなら自分を負け犬にして置き換え可能。行動値＋2。"
+      "description": "手札に[虚葉]があるのなら、自分を負け犬にして置き換える事ができる。置き換えた場合自分の行動値を2増やす。勝利条件には影響しない。"
     }
   },
   {
@@ -333,7 +333,7 @@
     "attacks": { "normal": { "name": "頭突き", "damage": 20 } },
     "skills": [
       { "tier": "low", "name": "羊の防衛本能", "cp": 3, "description": "このカードを負け犬にする（勝利条件に影響しない）。" },
-      { "tier": "high", "name": "ひつじが1匹...", "cp": 6, "description": "自ターン開始時のみ。場の全モンスターを1ターン行動不能。" }
+      { "tier": "high", "name": "ひつじが1匹...", "cp": 6, "description": "自分のターンの初めにのみ発動可能。場の全てのモンスターを1ターン行動不能にする。" }
     ],
     "passive": null
   },
@@ -346,8 +346,8 @@
     "stats": { "range": 1, "hp": 120 },
     "attacks": { "normal": { "name": "殴り", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "1000kgフィスト", "cp": 4, "description": "サイコロ5〜6で70ダメージ。1〜4は失敗。" },
-      { "tier": "high", "name": "1Tストンプ", "cp": 7, "description": "1〜2で敵全体100ダメージ。3〜6で自分に100ダメージ。" }
+      { "tier": "low", "name": "1000kgフィスト", "cp": 4, "description": "サイコロを振って、1～4なら失敗　5～6なら70ダメージを与える。" },
+      { "tier": "high", "name": "1Tストンプ", "cp": 7, "description": "サイコロを振って、1～2なら敵全員に100ダメージ　3～6なら捻挫して自分に100ダメージ。" }
     ],
     "passive": null
   },
@@ -360,7 +360,7 @@
     "stats": { "range": 1, "hp": 90 },
     "attacks": { "normal": { "name": "唾ぺッ", "damage": 20 } },
     "skills": [
-      { "tier": "high", "name": "俺のちんこもでかくなってねぇかぇお？", "cp": 8, "description": "70ダメージ。次に受けるダメージ−40。味方に[アオリ]がいればアオリ攻撃力＋30。" }
+      { "tier": "high", "name": "俺のちんこもでかくなってねぇかぇお？", "cp": 8, "description": "70ダメージ、自分が次に受けるダメージを40軽減する。味方に[アオリ]がいる場合、次のアオリの攻撃力＋30。" }
     ],
     "passive": {
       "name": "デカチン",
@@ -376,8 +376,8 @@
     "stats": { "range": 1, "hp": 120 },
     "attacks": { "normal": { "name": "カスパンチ", "damage": 10 } },
     "skills": [
-      { "tier": "low", "name": "黒いフラッシュ", "cp": 2, "description": "70ダメージ。サイコロ1が出なければ失敗。" },
-      { "tier": "high", "name": "穿つ拳", "cp": 5, "description": "30ダメージ。次ターン味方が狙われたら代わりに自分が受ける。" }
+      { "tier": "low", "name": "黒いフラッシュ", "cp": 2, "description": "70ダメージ、サイコロを振り1が出なければ失敗。" },
+      { "tier": "high", "name": "穿つ拳", "cp": 5, "description": "30ダメージ。次の相手のターン、敵から自分以外の味方のみが対象にされれば代わりに自分が効果を受ける。" }
     ],
     "passive": null
   },
@@ -390,8 +390,8 @@
     "stats": { "range": 1, "hp": 100 },
     "attacks": { "normal": { "name": "殺意", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "脳震盪", "cp": 5, "description": "30ダメージ。2ターン回復不可。" },
-      { "tier": "high", "name": "嚙み砕く", "cp": 10, "description": "射程無視で指定したカード1枚を粉砕。" }
+      { "tier": "low", "name": "脳震盪", "cp": 5, "description": "30ダメージ、2ターンの間この技で受けたダメージは回復できない。" },
+      { "tier": "high", "name": "嚙み砕く", "cp": 10, "description": "射程距離関係なく指定したカード1枚を粉砕する。" }
     ],
     "passive": null
   },
@@ -405,7 +405,7 @@
     "attacks": { "normal": { "name": "小さいお手々", "damage": 10 } },
     "skills": [
       { "tier": "low", "name": "骨の供給", "cp": 1, "description": "CPを3回復する。" },
-      { "tier": "high", "name": "至極の可愛さ", "cp": 6, "description": "次の自ターンまで生存していればCPを10回復。" }
+      { "tier": "high", "name": "至極の可愛さ", "cp": 6, "description": "自ターンの初めにのみ使用可能。次の自ターンまで自分が粉砕されていなければCPを10回復。" }
     ],
     "passive": null
   },
@@ -418,7 +418,7 @@
     "stats": { "range": 2, "hp": 40 },
     "attacks": { "normal": { "name": "松葉杖", "damage": 10 } },
     "skills": [
-      { "tier": "high", "name": "飴ちゃんいるかい？", "cp": 3, "description": "1ターン味方被ダメ−20＋HP20回復。自分不可。" }
+      { "tier": "high", "name": "飴ちゃんいるかい？", "cp": 3, "description": "1ターンの間味方の受けるダメージを20軽減し、HPを20回復。自分には使用不可。" }
     ],
     "passive": {
       "name": "道徳心",
@@ -434,8 +434,8 @@
     "stats": { "range": 3, "hp": 50 },
     "attacks": { "normal": { "name": "ペンを投げる", "damage": 10 } },
     "skills": [
-      { "tier": "low", "name": "滅浄三業", "cp": 2, "description": "敵にダメージを与えるたび、敵全体に追加10ダメージ。" },
-      { "tier": "high", "name": "月に代わってお仕置きよ", "cp": 7, "description": "このターン味方全体の行動値＋1。" }
+      { "tier": "low", "name": "滅浄三業", "cp": 2, "description": "ターン終了時まで敵にダメージを与えるたびに、追加で敵全体に10ダメージ。" },
+      { "tier": "high", "name": "月に代わってお仕置きよ", "cp": 7, "description": "このターンの味方全体の行動値を1増やす。" }
     ],
     "passive": null
   },
@@ -449,7 +449,7 @@
     "attacks": { "normal": { "name": "視線", "damage": 10 } },
     "skills": [
       { "tier": "low", "name": "手を差し伸べる", "cp": 4, "description": "30ダメージ。" },
-      { "tier": "high", "name": "😭😭😭", "cp": 5, "description": "味方の状態異常を全て解除。" }
+      { "tier": "high", "name": "😭😭😭", "cp": 5, "description": "聖なる涙で味方の状態異常を全て洗い流す。" }
     ],
     "passive": null
   },
@@ -462,8 +462,8 @@
     "stats": { "range": 3, "hp": 60 },
     "attacks": { "normal": { "name": "音楽", "damage": 10 } },
     "skills": [
-      { "tier": "low", "name": "m!p", "cp": 3, "description": "味方の攻撃力＋10（1回）。音楽を流せる。" },
-      { "tier": "high", "name": "m!s", "cp": 6, "description": "指定モンスターはコイントス表でないと失敗。" }
+      { "tier": "low", "name": "m!p", "cp": 3, "description": "味方の攻撃力を＋10する。（1回）そしてYoutubeなどで音楽を流すことができる。" },
+      { "tier": "high", "name": "m!s", "cp": 6, "description": "場の指定されたモンスターはコイントスで表を出さないと失敗になる。" }
     ],
     "passive": null
   },
@@ -476,8 +476,8 @@
     "stats": { "range": 2, "hp": 70 },
     "attacks": { "normal": { "name": "ライト・ハンドピーク", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "射程管理", "cp": 4, "description": "相手前衛に20ダメージ。" },
-      { "tier": "high", "name": "え？ヒールしろ？", "cp": 6, "description": "味方全員のHPを20回復。" }
+      { "tier": "low", "name": "射程管理", "cp": 4, "description": "相手の前衛に20ダメージ。" },
+      { "tier": "high", "name": "え？ヒールしろ？", "cp": 6, "description": "味方全員のHPを20回復する。" }
     ],
     "passive": null
   },
@@ -490,11 +490,11 @@
     "stats": { "range": 1, "hp": 70 },
     "attacks": { "normal": { "name": "マフラーソード", "damage": 20 } },
     "skills": [
-      { "tier": "high", "name": "マフラーアーマー", "cp": 5, "description": "HP30回復。次の自ターンまで無敵。" }
+      { "tier": "high", "name": "マフラーアーマー", "cp": 5, "description": "自分のHPを30回復。次の自ターンになるまで無敵になる。" }
     ],
     "passive": {
       "name": "キュートアグレッション",
-      "description": "ダメージを受けるたびCPを1回復。"
+      "description": "自分がダメージを受けるとCPを1回復する。"
     }
   },
   {
@@ -506,8 +506,8 @@
     "stats": { "range": 1, "hp": 60 },
     "attacks": { "normal": { "name": "BB弾", "damage": 10 } },
     "skills": [
-      { "tier": "low", "name": "治療弾", "cp": 3, "description": "味方か自分のHPを30回復。" },
-      { "tier": "high", "name": "アドレナリン弾", "cp": 8, "description": "味方の攻撃力を1ターン2倍。" }
+      { "tier": "low", "name": "治療弾", "cp": 3, "description": "味方か自分のHPを30回復する。" },
+      { "tier": "high", "name": "アドレナリン弾", "cp": 8, "description": "味方の攻撃力を1ターン2倍にする。" }
     ],
     "passive": null
   },
@@ -528,7 +528,7 @@
     "image": "",
     "tags": ["アイテム"],
     "cp": 2,
-    "effect": "次の通常攻撃が敵全体に10ダメージを与える攻撃に変化する。"
+    "effect": "指定したモンスターの次に使う通常攻撃が上書きされ、10ダメージを敵全員に与える攻撃になる。"
   }
 ]
 
