@@ -525,7 +525,7 @@
     "id": 1002,
     "type": "item",
     "name": "連鎖反応促進剤",
-    "image": "",
+    "image": "images/rensahannou_drag.png",
     "tags": ["アイテム"],
     "cp": 2,
     "effect": "指定したモンスターの次に使う通常攻撃が上書きされ、10ダメージを敵全員に与える攻撃になる。"
@@ -534,7 +534,7 @@
     "id": 1003,
     "type": "item",
     "name": "紙ヤスリ・アーマー",
-    "image": "images/rensahannou_drag.png",
+    "image": "",
     "tags": ["アイテム"],
     "cp": 2,
     "effect": "次に受ける攻撃のダメージを10軽減し、攻撃してきたモンスターに10ダメージ。"
