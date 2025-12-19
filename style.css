@@ -118,6 +118,9 @@ h1, h2, h3 {
     "ヒラギノ角ゴシックサンセリフ W8",
     "Hiragino Kaku Gothic ProN",
     sans-serif;
+  font-family: "Hiragino Kaku Gothic Pro W8", sans-serif;
+  font-weight: 600; /* 400が標準、600くらいで少し太めに */
+  font-size: 0.85em; /* 数字より少し小さく */
 }
 
 /* DMG / CP 数字 */
