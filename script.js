@@ -81,7 +81,7 @@ function renderSkillBlock(title, skills) {
 
   return skills.map(skill => `
     <p>
-      ${title}（<span class="dmg-number">CP${skill.cp}</span>）:
+      ${title}（<span class="dmg-label">CP.</span><span class="dmg-number">${skill.cp}</span>）:
       <span class="skill-name">【${skill.name}】</span>
     </p>
     <p class="skill-description">${skill.description}</p>

@@ -134,6 +134,7 @@ h1, h2, h3 {
 .dmg-label {
   font-family: "SoloistExpand", sans-serif;
   font-size: 0.7em; /* 数字より少し小さく */
+  margin-left: 0px;
 }
 
 /* =======================
