@@ -53,18 +53,15 @@ function createCharacterCard(card) {
     <h3>${card.name}</h3>
     <div class="tags">${makeTags(card.tags)}</div>
 
-    <p><strong>射程:</strong> <span class="range-number dmg-number">${card.stats.range}</span></p>
-    <p><strong>HP:</strong> <span class="hp-number dmg-number">${card.stats.hp}</span></p>
+    <p><strong>RANGE:</strong> <span class="range-number dmg-number">${card.stats.range}</span></p>
+    <p><strong><span class="dmg-number">HP:</strong> <span class="hp-number dmg-number">${card.stats.hp}</span></p>
 
 
     <p>
       通常攻撃:
-      <span class="skill-name">【${card.attacks.normal.name}】</span>
-      <span class="damage">
-        <span class="dmg-label">DMG</span>.
-        <span class="dmg-number">${card.attacks.normal.damage}</span>
-      </span>
-    </p>
+       <span class="skill-name">【${card.attacks.normal.name}】</span>
+   <span class="dmg-label">-DMG.</span><span class="dmg-number">${card.attacks.normal.damage}</span>
+   </p>
 
     ${renderSkillBlock("低コストスキル", lowSkills)}
     ${renderSkillBlock("高コストスキル", highSkills)}
@@ -84,7 +81,7 @@ function renderSkillBlock(title, skills) {
 
   return skills.map(skill => `
     <p>
-      ${title}（CP<span class="cp-number">${skill.cp}</span>）:
+      ${title}（<span class="dmg-number">CP${skill.cp}</span>）:
       <span class="skill-name">【${skill.name}】</span>
     </p>
     <p class="skill-description">${skill.description}</p>
@@ -120,7 +117,7 @@ function createItemCard(card) {
     <img src="${card.image}">
     <h3>${card.name}</h3>
     <div class="tags">${makeTags(card.tags)}</div>
-    <p>CP<span class="cp-number">${card.cp}</span></p>
+    <p><span class="dmg-number">CP<span class="cp-number">${card.cp}</span></p>
     <p class="skill-description">${card.effect}</p>
   `;
 

@@ -60,9 +60,23 @@ h1, h2, h3 {
   position: relative;
   text-align: left; /* 能力表記左寄せ */
 }
+.card {
+  background: url('images/card_bg.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  color: white; /* 説明文を白に */
+}
 
 .card.item {
-  background: #f1f1f1;
+  background: url('images/card_bg.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
 }
 
 .card img {
@@ -110,11 +124,13 @@ h1, h2, h3 {
 .dmg-number,
 .cp-number {
   font-family: "SoloistExpand", sans-serif;
+  font-weight: normal;
 }
 
 /* DMG ラベル */
 .dmg-label {
-  font-size: 0.8em;
+  font-family: "SoloistExpand", sans-serif;
+  font-size: 0.7em; /* 数字より少し小さく */
 }
 
 /* =======================
