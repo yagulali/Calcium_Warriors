@@ -53,7 +53,7 @@ function createCharacterCard(card) {
     <h3>${card.name}</h3>
     <div class="tags">${makeTags(card.tags)}</div>
 
-    <p><strong>RANGE:</strong> <span class="range-number dmg-number">${card.stats.range}</span></p>
+    <p><strong><span class="dmg-number">RANGE:</strong> <span class="range-number dmg-number">${card.stats.range}</span></p>
     <p><strong><span class="dmg-number">HP:</strong> <span class="hp-number dmg-number">${card.stats.hp}</span></p>
 
 
