@@ -4,7 +4,7 @@ let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
 // =======================
 // JSON読み込み
 // =======================
-fetch("cards.json")
+fetch("./cards.json")
   .then(res => res.json())
   .then(data => {
     cards = data;
@@ -35,6 +35,11 @@ function displayCards(list) {
   items.forEach(card => itemBox.appendChild(createItemCard(card)));
 
   setupBookmarks();
+
+  // ★ 解像度監視（毎回再登録）
+  document.querySelectorAll(".card-image").forEach(img => {
+    imageObserver.observe(img);
+  });
 }
 
 // =======================
@@ -44,24 +49,33 @@ function createCharacterCard(card) {
   const div = document.createElement("div");
   div.className = "card";
 
+  const fileName = card.image.split("/").pop(); // ★重要
+
   const lowSkills  = (card.skills || []).filter(s => s.tier === "low");
   const highSkills = (card.skills || []).filter(s => s.tier === "high");
 
   div.innerHTML = `
     <div class="bookmark ${bookmarks.includes(card.id) ? "active" : ""}" data-id="${card.id}">★</div>
-    <img src="${card.image}">
+
+    <img
+      src="low_images/${fileName}"
+      data-low="low_images/${fileName}"
+      data-high="images/${fileName}"
+      class="card-image"
+      alt="${card.name}"
+    >
+
     <h3>${card.name}</h3>
     <div class="tags">${makeTags(card.tags)}</div>
 
-    <p><strong><span class="dmg-number">RANGE:</strong> <span class="range-number dmg-number">${card.stats.range}</span></p>
-    <p><strong><span class="dmg-number">HP:</strong> <span class="hp-number dmg-number">${card.stats.hp}</span></p>
-
+    <p>RANGE: <span class="dmg-number">${card.stats.range}</span></p>
+    <p>HP: <span class="dmg-number">${card.stats.hp}</span></p>
 
     <p>
       通常攻撃:
-       <span class="skill-name">【${card.attacks.normal.name}】</span>
-   <span class="dmg-label">-DMG.</span><span class="dmg-number">${card.attacks.normal.damage}</span>
-   </p>
+      <span class="skill-name">【${card.attacks.normal.name}】</span>
+      <span class="dmg-label"> DMG.</span><span class="dmg-number">${card.attacks.normal.damage}</span>
+    </p>
 
     ${renderSkillBlock("低コストスキル", lowSkills)}
     ${renderSkillBlock("高コストスキル", highSkills)}
@@ -72,7 +86,37 @@ function createCharacterCard(card) {
 }
 
 // =======================
-// スキルブロック（低・高 共通）
+// アイテムカード（★同じ構造）
+// =======================
+function createItemCard(card) {
+  const div = document.createElement("div");
+  div.className = "card item";
+
+  const fileName = card.image.split("/").pop(); // ★重要
+
+  div.innerHTML = `
+    <div class="bookmark ${bookmarks.includes(card.id) ? "active" : ""}" data-id="${card.id}">★</div>
+
+    <img
+      src="low_images/${fileName}"
+      data-low="low_images/${fileName}"
+      data-high="images/${fileName}"
+      class="card-image"
+      alt="${card.name}"
+    >
+
+    <h3>${card.name}</h3>
+    <div class="tags">${makeTags(card.tags)}</div>
+
+    <p>CP <span class="dmg-number">${card.cp}</span></p>
+    <p class="skill-description">${card.effect}</p>
+  `;
+
+  return div;
+}
+
+// =======================
+// スキルブロック
 // =======================
 function renderSkillBlock(title, skills) {
   if (!skills || skills.length === 0) {
@@ -81,7 +125,7 @@ function renderSkillBlock(title, skills) {
 
   return skills.map(skill => `
     <p>
-      ${title}（<span class="dmg-label">CP.</span><span class="dmg-number">${skill.cp}</span>）:
+      ${title}（CP <span class="dmg-number">${skill.cp}</span>）:
       <span class="skill-name">【${skill.name}】</span>
     </p>
     <p class="skill-description">${skill.description}</p>
@@ -89,7 +133,7 @@ function renderSkillBlock(title, skills) {
 }
 
 // =======================
-// パッシブ表示
+// パッシブ
 // =======================
 function makePassive(passive) {
   if (!passive) {
@@ -106,33 +150,14 @@ function makePassive(passive) {
 }
 
 // =======================
-// アイテムカード
-// =======================
-function createItemCard(card) {
-  const div = document.createElement("div");
-  div.className = "card item";
-
-  div.innerHTML = `
-    <div class="bookmark ${bookmarks.includes(card.id) ? "active" : ""}" data-id="${card.id}">★</div>
-    <img src="${card.image}">
-    <h3>${card.name}</h3>
-    <div class="tags">${makeTags(card.tags)}</div>
-    <p><span class="dmg-number">CP<span class="cp-number">${card.cp}</span></p>
-    <p class="skill-description">${card.effect}</p>
-  `;
-
-  return div;
-}
-
-// =======================
-// タグHTML
+// タグ
 // =======================
 function makeTags(tags = []) {
   return tags.map(t => `<span class="tag ${t}">${t}</span>`).join("");
 }
 
 // =======================
-// フィルター処理
+// フィルター
 // =======================
 function applyFilters() {
   const name = document.getElementById("searchName").value.trim();
@@ -142,14 +167,8 @@ function applyFilters() {
 
   const filtered = cards.filter(card => {
     const nameOK = card.name.includes(name);
-
-    const tagOK =
-      checkedTags.length === 0 ||
-      checkedTags.some(t => card.tags.includes(t));
-
-    const bookmarkOK =
-      !bookmarkOnly || bookmarks.includes(card.id);
-
+    const tagOK = checkedTags.length === 0 || checkedTags.some(t => card.tags.includes(t));
+    const bookmarkOK = !bookmarkOnly || bookmarks.includes(card.id);
     return nameOK && tagOK && bookmarkOK;
   });
 
@@ -181,3 +200,27 @@ document.querySelectorAll("#tagFilters input").forEach(cb =>
   cb.addEventListener("change", applyFilters)
 );
 document.getElementById("bookmarkOnly").addEventListener("change", applyFilters);
+
+// =======================
+// 解像度管理（★画面内⇄画面外）
+// =======================
+const imageObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const img = entry.target;
+
+    if (entry.isIntersecting) {
+      // 画面内 → 高解像度
+      if (img.dataset.high && img.src !== img.dataset.high) {
+        img.src = img.dataset.high;
+      }
+    } else {
+      // 画面外 → 低解像度に戻す
+      if (img.dataset.low && img.src !== img.dataset.low) {
+        img.src = img.dataset.low;
+      }
+    }
+  });
+}, {
+  rootMargin: "100px",
+  threshold: 0.1
+});
