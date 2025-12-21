@@ -476,7 +476,7 @@
     "stats": { "range": 2, "hp": 70 },
     "attacks": { "normal": { "name": "ライト・ハンドピーク", "damage": 20 } },
     "skills": [
-      { "tier": "low", "name": "射程管理", "cp": 4, "description": "相手の後衛に20ダメージ。" },
+      { "tier": "low", "name": "射程管理", "cp": 4, "description": "相手の前衛に40ダメージ。" },
       { "tier": "high", "name": "え？ヒールしろ？", "cp": 6, "description": "味方全員のHPを20回復する。" }
     ],
     "passive": null
