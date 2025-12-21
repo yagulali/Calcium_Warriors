@@ -630,7 +630,7 @@
     "effect": "指定した味方に相手のカードの技を使わせる。CPは自分持ち。"
   },
   {
-    "id": 1013,
+    "id": 1014,
     "type": "item",
     "name": "ゲートクラッシュ",
     "image": "images/unknown.png",
@@ -639,7 +639,7 @@
     "effect": "後衛に空きがある時のみ使用可能。味方の前衛を後衛に移動する。"
   },
   {
-    "id": 1013,
+    "id": 1015,
     "type": "item",
     "name": "キネティックブレイド",
     "image": "images/unknown.png",
@@ -648,7 +648,7 @@
     "effect": "敵の前衛に20ダメージを与え、敵の前後を入れ替える。"
   },
   {
-    "id": 1013,
+    "id": 1016,
     "type": "item",
     "name": "マスク",
     "image": "images/unknown.png",
@@ -657,7 +657,7 @@
     "effect": "1ターンの間指定した敵の射程距離を-1する。"
   },
   {
-    "id": 1013,
+    "id": 1017,
     "type": "item",
     "name": "虫歯治療",
     "image": "images/unknown.png",
@@ -666,7 +666,7 @@
     "effect": "味方の後衛を30回復する。"
   },
   {
-    "id": 1013,
+    "id": 1018,
     "type": "item",
     "name": "クリエイターの育成",
     "image": "images/unknown.png",
@@ -675,7 +675,7 @@
     "effect": "前衛の攻撃力を+10する。"
   },
   {
-    "id": 1013,
+    "id": 1019,
     "type": "item",
     "name": "版権フレーム",
     "image": "images/unknown.png",
@@ -684,7 +684,7 @@
     "effect": "自身のフィールドの前衛と後衛のカードを入れ替える。"
   },
   {
-    "id": 1013,
+    "id": 1020,
     "type": "item",
     "name": "NOKIA",
     "image": "images/unknown.png",
@@ -693,7 +693,7 @@
     "effect": "このカードをモンスター一体の上に置くことで次に受けるダメージを20軽減する。1度きり。"
   },
   {
-    "id": 1013,
+    "id": 1021,
     "type": "item",
     "name": "アーマープレート",
     "image": "images/unknown.png",
@@ -702,7 +702,7 @@
     "effect": "1ターンの間指定したモンスター1体の受けるダメージを20減らす。"
   },
   {
-    "id": 1013,
+    "id": 1022,
     "type": "item",
     "name": "カミカゼ・アタック",
     "image": "images/unknown.png",
