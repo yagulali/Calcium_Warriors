@@ -543,7 +543,7 @@
     "id": 1004,
     "type": "item",
     "name": "不死のトーテム",
-    "image": "images/unknown.png",
+    "image": "images/totem.png",
     "tags": ["アイテム"],
     "cp": 5,
     "effect": "指定した味方は1ターンの間、粉砕されずに1度だけHP20で復活する。"
@@ -552,7 +552,7 @@
     "id": 1005,
     "type": "item",
     "name": "サングラス",
-    "image": "images/unknown.png",
+    "image": "images/sunglasses.png",
     "tags": ["アイテム"],
     "cp": 3,
     "effect": "攻撃型にのみ使用可能。指定した味方の通常攻撃がダメージ軽減を貫通するようになる。"
