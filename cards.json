@@ -511,6 +511,52 @@
     ],
     "passive": null
   },
+  {
+    "id": 37,
+    "type": "character",
+    "name": "エレナ",
+    "image": "images/unknown.png",
+    "tags": ["支援型"],
+    "stats": { "range": 3, "hp": 60 },
+    "attacks": { "normal": { "name": "棘魔法", "damage": 10 } },
+    "skills": [
+      { "tier": "low", "name": "狙撃援護", "cp": 3, "description": "自ターン終了まで味方が攻撃した敵に追撃20ダメージ。" },
+      { "tier": "high", "name": "荊棘魔法", "cp": 6, "description": "2ターン間、敵全員は行動する度に20環境ダメージを受ける。自分が粉砕されると効果終了。重複不可。" }
+    ],
+    "passive": null
+  },
+  {
+    "id": 38,
+    "type": "character",
+    "name": "メル",
+    "image": "images/unknown.png",
+    "tags": ["支援型"],
+    "stats": { "range": 2, "hp": 50 },
+    "attacks": { "normal": { "name": "波動魔法", "damage": 20 } },
+    "skills": [
+      { "tier": "high", "name": "キャスターブレスレット", "cp": 1, "description": "手札のアイテムカードを一つ消費して自分のスキルにする。使用には本来のCP +1が必要。" }
+    ],
+    "passive": {
+      "name": "魅了",
+      "description": "場に出てから1ターン間、相手は自分単体を指定できない。"
+    }
+  },
+  {
+    "id": 39,
+    "type": "character",
+    "name": "シフォン・ツァーゴレ",
+    "image": "images/unknown.png",
+    "tags": ["防衛型"],
+    "stats": { "range": 1, "hp": 120 },
+    "attacks": { "normal": { "name": "手刀", "damage": 20 } },
+    "skills": [
+      { "tier": "high", "name": "御手砲:爆殺光線", "cp": 6, "description": "敵全体に10ダメージを3回与える。その後2ターン使用不可。" }
+    ],
+    "passive": {
+      "name": "ソウルドレインウォッチ",
+      "description": "ターン交代毎に10ダメージを食らう、自分が敵を粉砕することで30回復。このダメージで粉砕されると自分は[醜い化け物]になりHP10でその場に留まる。"
+    }
+  },
 
   {
     "id": 1001,
@@ -709,6 +755,15 @@
     "tags": ["アイテム"],
     "cp": 3,
     "effect": "指定したモンスターの通常攻撃が20ダメージ上がるが、攻撃後にHPが30減る"
+  },
+  {
+    "id": 1023,
+    "type": "item",
+    "name": "ケローン",
+    "image": "images/unknown.png",
+    "tags": ["アイテム"],
+    "cp": 3,
+    "effect": "相手の手札のモンスターカードを1枚見る。"
   }
 ]
 
