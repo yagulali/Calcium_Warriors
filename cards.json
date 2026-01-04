@@ -515,7 +515,7 @@
     "id": 37,
     "type": "character",
     "name": "エレナ",
-    "image": "images/unknown.png",
+    "image": "images/erena.png",
     "tags": ["支援型"],
     "stats": { "range": 3, "hp": 60 },
     "attacks": { "normal": { "name": "棘魔法", "damage": 10 } },
