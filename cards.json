@@ -557,7 +557,83 @@
       "description": "毎ターン10ダメージ負傷、自分が敵を粉砕すると30回復。この負傷で粉砕されるとHP10の[醜い化け物]になる。"
     }
   },
-
+  {
+    "id": 40,
+    "type": "character",
+    "name": "にゃそ",
+    "image": "images/unknown.png",
+    "tags": ["防衛型"],
+    "stats": { "range": 1, "hp": 80 },
+    "attacks": { "normal": { "name": "ドリルちょんっ", "damage": 10 } },
+    "skills": [
+      { "tier": "high", "name": "改良型シールドバブル", "cp": 8, "description": "味方全員に重複可共有バリア50ダメージ分展開。超過分は自分が受ける。持続効果防御不可。" }
+    ],
+    "passive": {
+      "name": "一番しんどい時隣にいてくれたろ",
+      "description": "[にゃそ]が粉砕されると、とどめの超過ダメージで【改良型シールドバブル】を生成。"
+    }
+  },
+  {
+    "id": 41,
+    "type": "character",
+    "name": "マッドモチ",
+    "image": "images/unknown.png",
+    "tags": ["防衛型"],
+    "stats": { "range": 1, "hp": 80 },
+    "attacks": { "normal": { "name": "無為転変", "damage": 20 } },
+    "skills": [
+      { "tier": "high", "name": "偏殺即霊体", "cp": 7, "description": "射程が2になりパッシブがスキル【魂を穿つ】CP6に変化。" }
+    ],
+    "passive": {
+      "name": "魂の本質",
+      "description": "自ターン終了時CP5以上なら20回復。変化後、射程内全員に40ダメージ。"
+    }
+  },
+  {
+    "id": 42,
+    "type": "character",
+    "name": "まっさ（アオ奇妙）",
+    "image": "images/unknown.png",
+    "tags": ["防衛型"],
+    "stats": { "range": 1, "hp": 100 },
+    "attacks": { "normal": { "name": "けつ毛スパイク", "damage": 20 } },
+    "skills": [
+      { "tier": "low", "name": "けつ毛ヒール", "cp": 2, "description": "ダメージを受ける度に10回復（2回）。回数重複可能。" },
+      { "tier": "high", "name": "チーンストライク", "cp": 4, "description": "20ダメージ。敵の前衛に使った場合前後を入れ替える。" }
+    ],
+    "passive": null
+  },
+  {
+    "id": 43,
+    "type": "character",
+    "name": "もち",
+    "image": "images/unknown.png",
+    "tags": ["支援型"],
+    "stats": { "range": 3, "hp": 50 },
+    "attacks": { "normal": { "name": "綺麗な棘には棘がある", "damage": 10 } },
+    "skills": [
+      { "tier": "high", "name": "命の樹", "cp": 5, "description": "味方全員を10回復、その後自ターン開始時に10回復（1回）。自分の次の通常攻撃を＋10する。 " }
+    ],
+    "passive": {
+      "name": "ヒーリングブロッサム",
+      "description": "味方に通常攻撃した場合攻撃力分回復する。"
+    }
+  },
+    {
+    "id": 44,
+    "type": "character",
+    "name": "戦略バニー",
+    "image": "images/unknown.png",
+    "tags": ["支援型"],
+    "stats": { "range": 2, "hp": 40 },
+    "attacks": { "normal": { "name": "クラシック", "damage": 10 } },
+    "skills": [
+      { "tier": "low", "name": "お金あるよ！！", "cp": 3, "description": "射程関係無しに指定した敵の通常攻撃を【クラシック】に変える。（1ターン）" },
+      { "tier": "high", "name": "スキン乞食", "cp": 5, "description": "射程関係無しに指定した敵のパッシブを無効化する。（3ターン）" }
+    ],
+    "passive": null
+  },
+  
   {
     "id": 1001,
     "type": "item",
